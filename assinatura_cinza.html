@@ -10,12 +10,12 @@
                                     <tbody>
                                         <tr>
                                             <td width="20" style="padding: 0px; vertical-align: bottom;">
-                                                <a href="https://www.linkedin.com/in/NOME_DE_USUARIO" style="vertical-align: middle;">
+                                                <a href="@{outputs('Get_response_details')?['body/red567f3efcdb4799993fec3c83b770fc']}" style="vertical-align: middle;">
                                                     <img src="https://i.ibb.co/Jqzb7z5/linkedin.png" alt="linkedIn" width="12" style="vertical-align: bottom;">
                                                 </a>
                                             </td>
                                             <td style="vertical-align: bottom;">
-                                                <h2 style="margin: 0px; font-size: 15px; color: #003A79; font-weight: bold; font-family: Arial;">Nome Sobrenome</h2>
+                                                <h2 style="margin: 0px; font-size: 15px; color: #003A79; font-weight: bold; font-family: Arial;">@{outputs('Get_response_details')?['body/rbc5080384ea2411eb7681f6bcc102806']}</h2>
                                             </td>
                                             <td rowspan="2" style="padding-left: 30px; vertical-align: middle;">
                                                 <img src='https://i.ibb.co/g6hFbCq/Marca-DGPE-endosso.png'width="180" height="auto"/>
@@ -26,7 +26,7 @@
                                                 
                                             </td>
                                             <td style="vertical-align: top;">
-                                                <p style="margin: 0px; color: #008BC9; font-size: 14px; line-height: 22px; font-family: Arial">Nome do Cargo</h4>
+                                                <p style="margin: 0px; color: #008BC9; font-size: 14px; line-height: 22px; font-family: Arial">@{outputs('Get_response_details')?['body/rf0f0d4de85384279bb869964a9e26fe7']}</h4>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -66,7 +66,7 @@
                                                 </table>
                                             </td>
                                             <td style="padding: 0px; color: #88868B;">
-                                                <span style="text-decoration: none; color: #88868B; font-size: 12px;">(XX) XXXXX-XXXX</span>
+                                                <span style="text-decoration: none; color: #88868B; font-size: 12px;">@{if(less(length(outputs('Get_response_details')?['body/less(r922bb04e4db34ccfb8417466d716aedb']), 1), string('(21) 3799-4334'), outputs('Get_response_details')?['body/less(r922bb04e4db34ccfb8417466d716aedb'])}</span>
                                             </td>
                                         </tr>
                                         <tr height="15" style="vertical-align: middle;">
@@ -75,18 +75,22 @@
                                                     <tbody>
                                                         <tr>
                                                             <td style="vertical-align: bottom;">
-                                                                <span color="#88868B" width="11"  style="display: inline-block;">
-                                                                    <img src="https://i.ibb.co/Hrb3czS/mail-cinza.png" alt="emailAddress" width="10" style="display: block;">
-                                                                </span>
+                                                                <a href="mailto:@{outputs('Get_response_details')?['body/r38b6e1d025ba4f699a46222b19f748eb']}" color="#88868B" style="text-decoration: none; color: #88868B; font-size: 12px;">
+                                                                    <span color="#88868B" width="11"  style="display: inline-block;">
+                                                                        <img src="https://i.ibb.co/Hrb3czS/mail-cinza.png" alt="emailAddress" width="10" style="display: block;">
+                                                                    </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
                                             <td style="padding: 0px;">
-                                                <span style="text-decoration: none; color: #88868B; font-size: 12px;">
-                                                    nome.sobrenome@fgv.br
-                                                </span>
+                                                <a href="mailto:@{outputs('Get_response_details')?['body/r38b6e1d025ba4f699a46222b19f748eb']}" color="#88868B" style="text-decoration: none; color: #88868B; font-size: 12px;">
+                                                    <span style="text-decoration: none; color: #88868B; font-size: 12px;">
+                                                        @{outputs('Get_response_details')?['body/r38b6e1d025ba4f699a46222b19f748eb']}
+                                                    </span>
+                                                </a>
                                             </td>
                                         </tr>
                                         <tr height="15" style="vertical-align: middle;">
